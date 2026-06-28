@@ -136,8 +136,8 @@ function ResumeSidebar() {
     >
       <div className="w-[1px] h-16 bg-gradient-to-t from-card-border to-transparent mb-2" />
       <a
-        href="#"
-        onClick={(e) => { e.preventDefault(); alert("Resume coming soon!"); }}
+        href="/Mehak_Developer_Resume.pdf"
+        download
         className="text-[10px] font-mono tracking-[0.25em] text-muted-text hover:text-accent transition-colors duration-300"
         style={{ writingMode: "vertical-rl" }}
       >
