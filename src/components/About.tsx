@@ -104,7 +104,7 @@ export default function About() {
 
             {/* Animated stats */}
             <div className="grid grid-cols-3 gap-4 mt-5">
-              <AnimatedStat value={1} suffix="+" label="Years of Experience" delay={0.25} />
+              <AnimatedStat value={1.5} suffix="+" label="Years of Experience" delay={0.25} />
               <AnimatedStat value={10} suffix="+" label="Projects Shipped" delay={0.35} />
               <AnimatedStat value={6} suffix="+" label="Organizations" delay={0.45} />
             </div>
