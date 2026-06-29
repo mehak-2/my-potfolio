@@ -22,18 +22,27 @@ export default function Projects() {
 
   const featured = {
     id: "01",
-    title: "Volunteer-Hub",
+    title: "PrePrep",
     tag: "Featured Project",
-    tech: ["Node.js", "Express", "Next.js", "TypeScript", "Redux Toolkit", "Tailwind CSS"],
-    desc: "A full-stack volunteer management platform with Node.js, Express, and Next.js. Features role-based access, streamlined onboarding, document uploads, and responsive dashboards. Built with TypeScript, Redux Toolkit, and Tailwind CSS for scalable, modern UI/UX.",
-    github: "https://github.com/mehak-2",
-    demo: "https://volunteer-fe.vercel.app/auth",
-    image: "/13pro.jpeg",
+    tech: ["Next.js 16", "Express v5", "Google Gemini AI", "MongoDB", "Cloudinary", "Redux Toolkit", "Tailwind CSS v4"],
+    desc: "A premium full-stack AI-powered mock interview coach that parses resumes, generates tailored questions, records voice answers, transcribes via Gemini AI, and delivers deep analytical feedback with customizable evaluation sheets.",
+    github: "https://github.com/mehak-2/InterviewAI",
+    demo: "https://interview-ai-ecru-iota.vercel.app/",
+    image: "/preprep.png",
   };
 
   const grid = [
     {
       id: "02",
+      title: "Volunteer-Hub",
+      tech: ["Node.js", "Express", "Next.js", "TypeScript", "Redux Toolkit", "Tailwind CSS"],
+      desc: "A full-stack volunteer management platform with Node.js, Express, and Next.js. Features role-based access, streamlined onboarding, document uploads, and responsive dashboards. Built with TypeScript, Redux Toolkit, and Tailwind CSS for scalable, modern UI/UX.",
+      github: "https://github.com/mehak-2",
+      demo: "https://volunteer-fe.vercel.app/auth",
+      image: "/13pro.jpeg",
+    },
+    {
+      id: "03",
       title: "FaHub",
       tech: ["React JS", "Context API", "Firebase Auth", "Responsive Design"],
       desc: "An immersive e-commerce shopping website offering a wide range of fashion products. Built with a focus on user experience and modern design trends.",
@@ -42,7 +51,7 @@ export default function Projects() {
       image: "/1pro.jpeg",
     },
     {
-      id: "03",
+      id: "04",
       title: "Chat App",
       tech: ["React JS", "API Integration", "Real-time", "Firebase"],
       desc: "A real-time chat application built with React JS and an API backend, enabling seamless communication and dynamic message updates.",
@@ -53,9 +62,9 @@ export default function Projects() {
   ];
 
   const moreProjects = [
-    { id: "04", title: "Grocery Store", tech: ["React JS", "Redux", "E-commerce", "JavaScript"], desc: "A fully functional e-commerce website for grocery shopping, featuring product listings, cart functionality, and a clean user interface.", image: "/3pro.jpeg", demo: "https://ecommerceweb-kappa.vercel.app/", github: "https://github.com/mehak-2/ecommerceweb" },
-    { id: "05", title: "School Management System", tech: ["Java", "MySQL", "J2EE", "Backend", "Spring"], desc: "A comprehensive system for managing school operations, built with Java, MySQL, and J2EE technologies. Streamlines administrative tasks.", image: "/4pro.jpeg", demo: "#", github: "https://github.com/mehak-2/school-management-web-app" },
-    { id: "06", title: "Keyframes App", tech: ["React JS", "CSS Animations", "API", "JSON", "Frontend"], desc: "An innovative application for creating and visualizing CSS keyframe animations, leveraging React JS, APIs, and JSON for dynamic control.", image: "/5pro.jpeg", demo: "https://keyframes-app.vercel.app/", github: "https://github.com/mehak-2/keyframes_app" },
+    { id: "05", title: "Grocery Store", tech: ["React JS", "Redux", "E-commerce", "JavaScript"], desc: "A fully functional e-commerce website for grocery shopping, featuring product listings, cart functionality, and a clean user interface.", image: "/3pro.jpeg", demo: "https://ecommerceweb-kappa.vercel.app/", github: "https://github.com/mehak-2/ecommerceweb" },
+    { id: "06", title: "School Management System", tech: ["Java", "MySQL", "J2EE", "Backend", "Spring"], desc: "A comprehensive system for managing school operations, built with Java, MySQL, and J2EE technologies. Streamlines administrative tasks.", image: "/4pro.jpeg", demo: "#", github: "https://github.com/mehak-2/school-management-web-app" },
+    { id: "07", title: "Keyframes App", tech: ["React JS", "CSS Animations", "API", "JSON", "Frontend"], desc: "An innovative application for creating and visualizing CSS keyframe animations, leveraging React JS, APIs, and JSON for dynamic control.", image: "/5pro.jpeg", demo: "https://keyframes-app.vercel.app/", github: "https://github.com/mehak-2/keyframes_app" },
     { id: "08", title: "Quiz App", tech: ["Next.js", "Tailwind CSS", "TypeScript", "Full-stack"], desc: "An interactive quiz application developed with Next.js, Tailwind CSS, and TypeScript, offering a fun and engaging user experience.", image: "/7pro.jpeg", demo: "https://quizassign.vercel.app/", github: "https://github.com/mehak-2/quizassign" },
     { id: "09", title: "Pokemon App", tech: ["React JS", "CSS", "API", "Frontend"], desc: "A vibrant application showcasing Pokemon data, built with React JS, CSS, and utilizing a Pokemon API for dynamic content.", image: "/8pro.jpeg", demo: "https://pokemon-app1-iota.vercel.app/", github: "#" },
     { id: "10", title: "Canva Clone", tech: ["HTML", "CSS", "Frontend Basics", "UI Design"], desc: "A simplified clone of Canva's design interface, built with HTML and CSS to practice fundamental web development skills.", image: "/9pro.jpeg", demo: "https://canva-task-1.vercel.app/", github: "https://github.com/mehak-2/canva-task-1" },
@@ -90,13 +99,13 @@ export default function Projects() {
           {/* Featured — spans 2 cols & 2 rows */}
           <motion.div
             {...fadeUp(0.05)}
-            className="lg:col-span-2 glass-panel rounded-3xl flex flex-col md:flex-row group relative overflow-hidden"
+            className="lg:col-span-2 glass-panel rounded-3xl flex flex-col group relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
             <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-accent/20 transition-all duration-500 pointer-events-none" />
 
-            {/* Content Left */}
-            <div className="relative z-10 w-full md:w-1/2 flex flex-col justify-between p-8 sm:p-10 h-full">
+            {/* Content Top */}
+            <div className="relative z-10 w-full flex flex-col justify-between p-8 sm:p-10">
               <div>
                 <span className="inline-flex items-center gap-1.5 text-[10px] font-mono text-accent bg-accent/10 border border-accent/20 px-3 py-1 rounded-full uppercase tracking-widest mb-6">
                   ★ {featured.tag}
@@ -107,7 +116,7 @@ export default function Projects() {
                 <p className="text-muted-text text-sm sm:text-base leading-relaxed mb-8">
                   {featured.desc}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-8 md:mb-0">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {featured.tech.map((t) => (
                     <span key={t} className="px-3 py-1.5 text-[10px] font-mono tracking-widest uppercase bg-foreground/5 border border-card-border text-muted-text rounded-full">
                       {t}
@@ -116,7 +125,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="flex gap-3 opacity-60 group-hover:opacity-100 transition-opacity mt-auto">
+              <div className="flex gap-3 opacity-60 group-hover:opacity-100 transition-opacity">
                 <a href={featured.github} target="_blank" rel="noreferrer" className="text-muted-text hover:text-foreground transition-colors p-2 glass-panel rounded-lg hover:border-accent/30">
                   <GithubIcon />
                 </a>
@@ -126,9 +135,9 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Image Right (Bleeding off bottom-right) */}
-            <div className="relative z-10 w-full md:w-1/2 bg-foreground/[0.02] border-t md:border-t-0 md:border-l border-card-border overflow-hidden flex items-end justify-end pt-10 pl-10 md:min-h-[380px]">
-              <div className="w-full h-[90%] rounded-tl-xl overflow-hidden border-t border-l border-card-border shadow-2xl group-hover:-translate-x-1 group-hover:-translate-y-1 transition-transform duration-500 bg-background">
+            {/* Image Bottom */}
+            <div className="relative z-10 w-full bg-foreground/[0.02] border-t border-card-border overflow-hidden flex items-end justify-center pt-8 px-8 sm:px-10">
+              <div className="w-full h-auto aspect-video rounded-t-xl overflow-hidden border-t border-x border-card-border shadow-2xl group-hover:-translate-y-1 transition-transform duration-500 bg-background">
                 <img src={featured.image} alt={featured.title} className="w-full h-full object-cover object-top" />
               </div>
             </div>
