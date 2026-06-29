@@ -50,18 +50,10 @@ export default function Projects() {
       demo: "https://react-shop-plum-seven.vercel.app/",
       image: "/1pro.jpeg",
     },
-    {
-      id: "04",
-      title: "Chat App",
-      tech: ["React JS", "API Integration", "Real-time", "Firebase"],
-      desc: "A real-time chat application built with React JS and an API backend, enabling seamless communication and dynamic message updates.",
-      github: "https://github.com/mehak-2/react-chatapp",
-      demo: "https://luxury-squirrel-100f11.netlify.app/",
-      image: "/2pro.jpeg",
-    },
   ];
 
   const moreProjects = [
+    { id: "04", title: "Chat App", tech: ["React JS", "API Integration", "Real-time", "Firebase"], desc: "A real-time chat application built with React JS and an API backend, enabling seamless communication and dynamic message updates.", image: "/2pro.jpeg", demo: "https://luxury-squirrel-100f11.netlify.app/", github: "https://github.com/mehak-2/react-chatapp" },
     { id: "05", title: "Grocery Store", tech: ["React JS", "Redux", "E-commerce", "JavaScript"], desc: "A fully functional e-commerce website for grocery shopping, featuring product listings, cart functionality, and a clean user interface.", image: "/3pro.jpeg", demo: "https://ecommerceweb-kappa.vercel.app/", github: "https://github.com/mehak-2/ecommerceweb" },
     { id: "06", title: "School Management System", tech: ["Java", "MySQL", "J2EE", "Backend", "Spring"], desc: "A comprehensive system for managing school operations, built with Java, MySQL, and J2EE technologies. Streamlines administrative tasks.", image: "/4pro.jpeg", demo: "#", github: "https://github.com/mehak-2/school-management-web-app" },
     { id: "07", title: "Keyframes App", tech: ["React JS", "CSS Animations", "API", "JSON", "Frontend"], desc: "An innovative application for creating and visualizing CSS keyframe animations, leveraging React JS, APIs, and JSON for dynamic control.", image: "/5pro.jpeg", demo: "https://keyframes-app.vercel.app/", github: "https://github.com/mehak-2/keyframes_app" },
@@ -94,18 +86,18 @@ export default function Projects() {
         </motion.div>
 
         {/* ── BENTO GRID ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
 
-          {/* Featured — spans 2 cols & 2 rows */}
+          {/* Featured — spans 2 cols */}
           <motion.div
             {...fadeUp(0.05)}
-            className="lg:col-span-2 glass-panel rounded-3xl flex flex-col group relative overflow-hidden"
+            className="lg:col-span-2 glass-panel rounded-3xl flex flex-col justify-between group relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
             <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-accent/20 transition-all duration-500 pointer-events-none" />
 
             {/* Content Top */}
-            <div className="relative z-10 w-full flex flex-col justify-between p-8 sm:p-10">
+            <div className="relative z-10 w-full flex flex-col p-8 sm:p-10">
               <div>
                 <span className="inline-flex items-center gap-1.5 text-[10px] font-mono text-accent bg-accent/10 border border-accent/20 px-3 py-1 rounded-full uppercase tracking-widest mb-6">
                   ★ {featured.tag}
@@ -136,24 +128,24 @@ export default function Projects() {
             </div>
 
             {/* Image Bottom */}
-            <div className="relative z-10 w-full bg-foreground/[0.02] border-t border-card-border overflow-hidden flex items-end justify-center pt-8 px-8 sm:px-10">
-              <div className="w-full h-auto aspect-video rounded-t-xl overflow-hidden border-t border-x border-card-border shadow-2xl group-hover:-translate-y-1 transition-transform duration-500 bg-background">
-                <img src={featured.image} alt={featured.title} className="w-full h-full object-cover object-top" />
+            <div className="relative z-10 w-full bg-foreground/[0.02] border-t border-card-border overflow-hidden flex items-end justify-center pt-8 px-8 sm:px-10 mt-auto">
+              <div className="w-full rounded-t-xl overflow-hidden border-t border-x border-card-border shadow-2xl group-hover:-translate-y-1 transition-transform duration-500 bg-background">
+                <img src={featured.image} alt={featured.title} className="w-full h-auto object-cover object-top max-h-[360px]" />
               </div>
             </div>
           </motion.div>
 
           {/* Right column — 2 smaller cards stacked */}
-          <div className="flex flex-col gap-5">
-            {grid.map((project, idx) => (
+          <div className="flex flex-col gap-5 justify-between">
+            {grid.slice(0, 2).map((project, idx) => (
               <motion.div
                 key={project.id}
                 {...fadeUp(0.1 + idx * 0.08)}
-                className="glass-panel glass-panel-hover rounded-3xl flex flex-col group relative overflow-hidden flex-1"
+                className="glass-panel glass-panel-hover rounded-3xl flex flex-col group relative overflow-hidden flex-1 justify-between"
               >
                 <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-accent/20 transition-all duration-500 pointer-events-none" />
 
-                <div className="relative z-10 flex-grow flex flex-col p-7 pb-0">
+                <div className="relative z-10 flex flex-col p-7 pb-0">
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <span className="text-[10px] font-mono text-muted-text tracking-widest mb-1 block">{project.id}</span>
@@ -182,7 +174,7 @@ export default function Projects() {
                 </div>
 
                 {/* Image Box (Bleeding off bottom) */}
-                <div className="relative z-10 w-full h-40 pt-4 px-6 flex items-end justify-center overflow-hidden">
+                <div className="relative z-10 w-full h-44 pt-4 px-6 flex items-end justify-center overflow-hidden mt-auto">
                   <div className="w-full h-full rounded-t-xl overflow-hidden border-t border-x border-card-border shadow-xl group-hover:-translate-y-2 transition-transform duration-500 bg-background">
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top" />
                   </div>
